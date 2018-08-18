@@ -1,0 +1,39 @@
+class Stack {
+
+	public int top;
+	int stackArr[];
+	
+	public Stack(int x) {
+	
+		top = -1;
+		stackArr[] = new int[x];
+	}
+	
+	public void push(int x) {
+	
+		if (top == stackArr.length-1) {
+			System.out.println("Stack Overflow");
+		} else {
+			stackArr[++top] = x;
+		}
+	}
+	
+	public int pop() {
+		
+		int pop = -1;
+		if (top == -1) {
+			System.out.println("Stack Underflow");
+		} else {
+			return stackArr[top--];
+		}
+		return pop;
+	}
+	
+	public void displayStack() {
+		
+		for (int i=0; i <= top; i++) {
+			System.out.print(stackArr[i] + (i == top ? "\n" : " "));
+		}
+	}
+}
+			
